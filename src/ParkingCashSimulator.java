@@ -66,7 +66,6 @@ public class ParkingCashSimulator
          * the cash when the car pays. Finally the print method show how much money was
          * made.
          */
-        private static final int COST = 2;
         private long cash;
 
         public ParkingCash()
@@ -76,7 +75,7 @@ public class ParkingCashSimulator
 
         public void vehiclePay()
         {
-            cash = cash + COST;
+            cash = cash + Configuration.getInstance().getParkingCost();
         }
 
         public void print()

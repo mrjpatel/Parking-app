@@ -25,10 +25,13 @@ public class ParkingCashApp extends Application
         render.run();
 
         primaryStage.show();
+        System.out.println(Configuration.getInstance().getParkingCost());
     }
 
 
     public static void main(String[] args) {
-        launch(args);
+    	String configFilePath = args[0];
+    	Configuration.getInstance().init(configFilePath);
+    	launch(args);
     }
 }
